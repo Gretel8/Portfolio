@@ -131,8 +131,8 @@
 </script>
 
 <!-- Landing Section -->
-<section class="h-screen sm:pb-auto pb-28 flex justify-center items-center container mx-auto px-4">
-	<div class="text-center flex flex-col items-center">
+<section class="h-screen flex flex-col justify-normal sm:justify-center items-center px-4">
+	<div class="text-center flex flex-col pt-16 sm:pt-0 items-center">
 		<h1 class="h1 text-4xl sm:text-5xl md:text-7xl animate-typewriter">Hi, I'm Gretel</h1>
 
 		<!-- Animated Logo -->
@@ -193,10 +193,9 @@
 						my career in forensic science as a serologist at DNA Labs International. In this role, I
 						performed critical forensic analyses and even stepped into the courtroom as an expert
 						witness to help solve complex criminal cases—think CSI, but without the dramatic music.
-						A few years later, I transitioned into R&D at Xymogen, A few years later, I transitioned
-						to research and development at Xymogen, where I contributed to the development of
-						dietary supplements and established a robust stability program that adhered to stringent
-						industry standards.
+						A few years later, I transitioned to R&D at Xymogen, where I contributed to the
+						development of dietary supplements and established a robust stability program that
+						adhered to stringent industry standards.
 					</p>
 					<p class="mt-4">
 						Collaborating with software teams and laboratory systems over the years sparked my
