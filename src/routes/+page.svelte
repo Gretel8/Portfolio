@@ -131,7 +131,7 @@
 </script>
 
 <!-- Landing Section -->
-<section class="sm:h-screen h-custom flex justify-center items-center container mx-auto px-4">
+<section class="h-screen sm:pb-auto pb-28 flex justify-center items-center container mx-auto px-4">
 	<div class="text-center flex flex-col items-center">
 		<h1 class="h1 text-4xl sm:text-5xl md:text-7xl animate-typewriter">Hi, I'm Gretel</h1>
 
@@ -291,9 +291,6 @@
 </section>
 
 <style lang="postcss">
-	.h-custom {
-		@apply min-h-[calc(100vh-2rem)];
-	}
 	figure {
 		@apply flex relative flex-col;
 	}
