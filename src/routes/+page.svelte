@@ -13,10 +13,10 @@
 			employer: 'UKG',
 			desktopDuration: 'Present',
 			mobileDuration: 'Present',
-			description: `As part of the UKG Pro Mobile App team, I help enhance a leading workforce management solution by developing intuitive features, optimizing app performance, and ensuring smooth integration between backend systems and the mobile interface. Working in an Agile environment, I contribute to delivering a scalable and seamless experience for users across all devices.`,
+			description: `As an iOS developer in the UKG Pro Mobile App team, I help enhance a leading human capital and workforce management solution by developing intuitive features, optimizing app performance, and ensuring smooth integration between backend systems and the mobile interface.`,
 			skills: [
-				{ src: '/images/logos/kotlin-logo.png', alt: 'Kotlin', title: 'Kotlin' },
 				{ src: '/images/logos/swift-logo.png', alt: 'Swift', title: 'Swift' },
+				{ src: '/images/logos/cordova_logo_normal.png', alt: 'Cordova', title: 'Cordova' },
 				{ src: '/images/logos/appium-logo.png', alt: 'Appium', title: 'Appium' }
 			]
 		},
@@ -85,7 +85,7 @@
 	// Project Data
 	const projects = [
 		{
-			title: 'CrimeLens LA',
+			title: 'CrimeLens LA: Crime Data Visualization Tool',
 			screenshots: [
 				'/images/project-screenshots/crimelens-1.png',
 				'/images/project-screenshots/crimelens-2.png',
@@ -106,7 +106,7 @@
 			githubLink: 'https://github.com/Gretel8/CrimeLensLA'
 		},
 		{
-			title: 'FoodBridge',
+			title: 'FoodBridge: Donation Platform',
 			screenshots: [
 				'/images/project-screenshots/foodbridge-1.png',
 				'/images/project-screenshots/foodbridge-2.png',
