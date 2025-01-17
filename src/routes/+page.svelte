@@ -2,7 +2,6 @@
 	import Contact from '../components/Contact.svelte';
 	import Experience from '../components/Experience.svelte';
 	import Project from '../components/Project.svelte';
-	import emailjs from '@emailjs/browser';
 
 	// Experience Data
 	const experiences = [
@@ -133,8 +132,9 @@
 <!-- Landing Section -->
 <section class="h-screen flex flex-col justify-normal sm:justify-center items-center px-4">
 	<div class="text-center flex flex-col pt-16 sm:pt-0 items-center">
-		<h1 class="h1 text-4xl sm:text-5xl md:text-7xl animate-typewriter">Hi, I'm Gretel</h1>
-
+		<div class="animate-typewriter block">
+			<h1 class="h1 text-4xl sm:text-5xl md:text-7xl">Hi, I'm Gretel</h1>
+		</div>
 		<!-- Animated Logo -->
 		<figure>
 			<section class="img-bg" />
@@ -323,16 +323,18 @@
 		}
 	}
 
-	.animate-typewriter {
-		overflow: hidden;
+	.animate-typewriter h1 {
+		margin: 0 auto;
+		border-right: 3px solid rgba(236, 73, 230, 0.75);
 		white-space: nowrap;
-		width: 0;
+		overflow: hidden;
+		transform: translateY(-50%);
 		animation:
-			typing 3s steps(20) forwards,
-			blink 0.5s step-end infinite;
+			typewriter 1.2s steps(10, end) 1s 1 normal both,
+			blinkTextCursor 500ms steps(10, end) infinite normal;
 	}
 
-	@keyframes typing {
+	@keyframes typewriter {
 		from {
 			width: 0;
 		}
@@ -340,14 +342,12 @@
 			width: 100%;
 		}
 	}
-
-	@keyframes blink {
-		from,
+	@keyframes blinkTextCursor {
+		from {
+			border-right-color: rgba(236, 73, 230, 0.75);
+		}
 		to {
 			border-right-color: transparent;
-		}
-		50% {
-			border-right-color: black;
 		}
 	}
 
