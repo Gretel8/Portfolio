@@ -8,10 +8,10 @@
 	export let githubLink: string;
 </script>
 
-<div class="relative card p-4 sm:py-8 shadow-lg">
+<div class="relative card p-6 sm:py-8 shadow-lg">
 	<!-- Title-->
 	<div class="flex items-center justify-center my-2">
-		<h2 class="text-lg sm:text-2xl font-bold sm:text-left mb-2">{title}</h2>
+		<h2 class="text-lg sm:text-2xl font-bold sm:text-left">{title}</h2>
 	</div>
 
 	<!-- Project Image -->

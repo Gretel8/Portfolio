@@ -9,7 +9,7 @@
 	export let skills = [];
 </script>
 
-<div class="card p-4 sm:p-6 shadow-lg flex flex-col items-center gap-4 sm:flex-row sm:items-start">
+<div class="card p-6 shadow-lg flex flex-col items-center gap-4 sm:flex-row sm:items-start">
 	<!-- Light Mode Logo -->
 	<img
 		src={logoLight}

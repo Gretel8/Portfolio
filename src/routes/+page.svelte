@@ -84,7 +84,7 @@
 	// Project Data
 	const projects = [
 		{
-			title: 'CrimeLens LA: Crime Data Visualization Tool',
+			title: 'CrimeLens LA',
 			screenshots: [
 				'/images/project-screenshots/crimelens-1.png',
 				'/images/project-screenshots/crimelens-2.png',
@@ -130,7 +130,10 @@
 </script>
 
 <!-- Landing Section -->
-<section class="h-screen flex flex-col justify-normal sm:justify-center items-center px-4">
+<section
+	id="landing"
+	class="h-screen flex flex-col justify-normal sm:justify-center items-center px-4"
+>
 	<div class="text-center flex flex-col pt-16 sm:pt-0 items-center">
 		<div class="animate-typewriter block">
 			<h1 class="h1 text-4xl sm:text-5xl md:text-7xl">Hi, I'm Gretel</h1>

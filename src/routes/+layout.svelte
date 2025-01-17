@@ -32,7 +32,7 @@
 		<!-- App Bar -->
 		<AppBar background="bg-base-500">
 			<svelte:fragment slot="lead">
-				<a href="/" class="text-sm text-center sm:text-xl hover:text-primary-500 ml-4"
+				<a href="/#landing" class="text-sm text-center sm:text-xl hover:text-primary-500 ml-4"
 					>Gretel Arcia</a
 				>
 			</svelte:fragment>
