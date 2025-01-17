@@ -88,7 +88,7 @@
 <!-- Modal -->
 {#if $isModalOpen}
 	<div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-		<div class="card shadow-lg p-6 max-w-md w-full">
+		<div class="card shadow-lg p-6 mx-4 max-w-md w-full">
 			<p class="text-center text-lg">{$modalMessage}</p>
 			<div class="flex justify-center mt-4">
 				<button on:click={closeModal} class="btn btn-md variant-filled-primary py-2 px-6">
