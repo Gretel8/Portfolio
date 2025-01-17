@@ -329,14 +329,17 @@
 		white-space: nowrap;
 		overflow: hidden;
 		transform: translateY(-50%);
+		visibility: hidden; /* Initially hidden */
 		animation:
 			typewriter 1.2s steps(10, end) 1s 1 normal both,
 			blinkTextCursor 500ms steps(10, end) infinite normal;
+		animation-fill-mode: forwards; /* Ensure it stays in its final state */
 	}
 
 	@keyframes typewriter {
 		from {
 			width: 0;
+			visibility: visible;
 		}
 		to {
 			width: 100%;
