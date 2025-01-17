@@ -325,31 +325,27 @@
 
 	.animate-typewriter h1 {
 		margin: 0 auto;
+		overflow: hidden;
 		border-right: 3px solid rgba(236, 73, 230, 0.75);
 		white-space: nowrap;
-		overflow: hidden;
-		transform: translateY(-50%);
-		visibility: hidden; /* Initially hidden */
 		animation:
-			typewriter 1.2s steps(10, end) 1s 1 normal both,
-			blinkTextCursor 500ms steps(10, end) infinite normal;
-		animation-fill-mode: forwards; /* Ensure it stays in its final state */
+			typing 1.5s steps(15) forwards,
+			blink 0.6s steps(15, end) infinite;
 	}
 
-	@keyframes typewriter {
+	@keyframes typing {
 		from {
 			width: 0;
-			visibility: visible;
 		}
 		to {
 			width: 100%;
 		}
 	}
-	@keyframes blinkTextCursor {
+	@keyframes blink {
 		from {
 			border-right-color: rgba(236, 73, 230, 0.75);
 		}
-		to {
+		50% {
 			border-right-color: transparent;
 		}
 	}
