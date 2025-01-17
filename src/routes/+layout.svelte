@@ -1,7 +1,10 @@
 <script lang="ts">
 	import '../app.postcss';
 	import { AppShell, AppBar, LightSwitch } from '@skeletonlabs/skeleton';
+	import { dev } from '$app/environment';
+	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 
+	injectAnalytics({ mode: dev ? 'development' : 'production' });
 	// Highlight JS
 	import hljs from 'highlight.js/lib/core';
 	import 'highlight.js/styles/github-dark.css';
