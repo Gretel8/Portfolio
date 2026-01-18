@@ -10,34 +10,24 @@
 			logoDark: '/images/logos/ukg-logo-dark.png',
 			title: 'Software Engineer Intern',
 			employer: 'UKG',
-			desktopDuration: 'Present',
-			mobileDuration: 'Present',
-			description: `As an iOS developer in the UKG Pro Mobile App team, I help enhance a leading human capital and workforce management solution by developing intuitive features, optimizing app performance, and ensuring smooth integration between backend systems and the mobile interface.`,
+			desktopDuration: '10 months',
+			mobileDuration: '10 mos',
+			description: `Contributed to multiple teams within UKG, working across both web and mobile platforms. On the UKG Pro Benefits Hub team, collaborated with an Agile group of engineers to build and enhance user-facing Angular features, resolve UI defects, and improve application reliability through automated regression testing. Later joined the UKG Pro Mobile App team as an iOS developer, where I helped develop new features, optimize performance, and ensure smooth integration between backend services and the mobile interface. Gained experience delivering production-ready code used by millions of users.`,
 			skills: [
+				{ src: '/images/logos/angular-logo.png', alt: 'Angular', title: 'Angular' },
+				{ src: '/images/logos/typescript-logo.svg', alt: 'TypeScript', title: 'TypeScript' },
+				{ src: '/images/logos/ngrx-logo.svg', alt: 'NgRx', title: 'NgRx' },
+				{ src: '/images/logos/rxjs-logo.png', alt: 'RxJS', title: 'RxJS' },
+				{ src: '/images/logos/sass-logo.png', alt: 'Sass', title: 'Sass' },
+				{ src: '/images/logos/java-logo.png', alt: 'Java', title: 'Java' },
+				{ src: '/images/logos/sql-logo.png', alt: 'SQL', title: 'SQL' },
+				{ src: '/images/logos/nightwatch-logo.png', alt: 'Nightwatch', title: 'Nightwatch' },
 				{ src: '/images/logos/swift-logo.png', alt: 'Swift', title: 'Swift' },
 				{ src: '/images/logos/cordova_logo_normal.png', alt: 'Cordova', title: 'Cordova' },
 				{ src: '/images/logos/appium-logo.png', alt: 'Appium', title: 'Appium' }
 			]
 		},
-		{
-			logoLight: '/images/logos/ukg-logo.png',
-			logoDark: '/images/logos/ukg-logo-dark.png',
-			title: 'Software Engineer Intern',
-			employer: 'UKG',
-			desktopDuration: '4 months',
-			mobileDuration: '4 months',
-			description: `Collaborated with an Agile team of six engineers in developing the UKG Pro Benefits Hub, a centralized benefits enrollment solution designed to serve millions of users. Played a key role in enhancing the user experience by building user-facing features, fixing UI defects and ensuring software quality through regression tests and development of automated tests with Nightwatch.`,
-			skills: [
-				{ src: '/images/logos/angular-logo.png', alt: 'Angular', title: 'Angular' },
-				{ src: '/images/logos/ngrx-logo.svg', alt: 'NgRx', title: 'NgRx' },
-				{ src: '/images/logos/rxjs-logo.png', alt: 'RxJS', title: 'RxJS' },
-				{ src: '/images/logos/typescript-logo.svg', alt: 'TypeScript', title: 'TypeScript' },
-				{ src: '/images/logos/sass-logo.png', alt: 'Sass', title: 'Sass' },
-				{ src: '/images/logos/java-logo.png', alt: 'Java', title: 'Java' },
-				{ src: '/images/logos/sql-logo.png', alt: 'SQL', title: 'SQL' },
-				{ src: '/images/logos/nightwatch-logo.png', alt: 'Nightwatch', title: 'Nightwatch' }
-			]
-		},
+
 		{
 			logoLight: '/images/logos/xymogen-logo.png',
 			logoDark: '/images/logos/xymogen-logo.png',
@@ -142,19 +132,13 @@
 		<figure>
 			<section class="img-bg" />
 			<img
-				src="/images/logos/colorfulpanda.png"
-				alt="Colorful Panda"
-				class="w-40 h-40 sm:w-64 sm:h-64 md:w-80 md:h-80 object-contain"
+				src="/images/logos/profile-photo.jpg"
+				alt="Profile Photo"
+				class="h-40 sm:h-64 md:h-80 object-contain rounded-xl m-10"
 			/>
 		</figure>
 		<div class="space-y-4 text-lg sm:text-xl mt-6 px-4">
-			<p>
-				A passionate <strong>Software Engineer</strong> dedicated to crafting elegant, efficient solutions.
-			</p>
-			<p>
-				Graduating in <strong>May 2025</strong>, currently gaining hands-on experience at
-				<strong>UKG</strong>.
-			</p>
+			<p>A full-stack software engineer building scalable, user-focused applications.</p>
 		</div>
 
 		<!-- Down Arrow -->
@@ -298,7 +282,8 @@
 	}
 	figure svg,
 	.img-bg {
-		@apply w-64 h-64 md:w-80 md:h-80;
+		@apply w-64 h-64 md:w-96 md:h-96;
+		margin-left: 60px;
 	}
 	.img-bg {
 		@apply absolute z-[-1] rounded-full blur-[50px] transition-all;
