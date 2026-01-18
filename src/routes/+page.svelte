@@ -3,20 +3,54 @@
 	import Experience from '../components/Experience.svelte';
 	import Project from '../components/Project.svelte';
 
+	// Calculate duration from start date to present
+	function calculateDuration(startDate: Date): { desktop: string; mobile: string } {
+		const now = new Date();
+		const years = now.getFullYear() - startDate.getFullYear();
+		const months = now.getMonth() - startDate.getMonth();
+
+		const totalMonths = years * 12 + months;
+		const displayYears = Math.floor(totalMonths / 12);
+		const displayMonths = totalMonths % 12;
+
+		let desktop = '';
+		let mobile = '';
+
+		if (displayYears > 0 && displayMonths > 0) {
+			desktop = `${displayYears} year${displayYears > 1 ? 's' : ''}, ${displayMonths} month${displayMonths > 1 ? 's' : ''}`;
+			mobile = `${displayYears}.${displayMonths} years`;
+		} else if (displayYears > 0) {
+			desktop = `${displayYears} year${displayYears > 1 ? 's' : ''}`;
+			mobile = `${displayYears} year${displayYears > 1 ? 's' : ''}`;
+		} else {
+			desktop = `${displayMonths} month${displayMonths > 1 ? 's' : ''}`;
+			mobile = `${displayMonths} mo${displayMonths > 1 ? 's' : ''}`;
+		}
+
+		return { desktop, mobile };
+	}
+
+	// Start date for current Software Engineer role
+	const currentRoleStartDate = new Date(2025, 3); // April 2025 (month is 0-indexed)
+	const currentDuration = calculateDuration(currentRoleStartDate);
+
 	// Experience Data
 	const experiences = [
 		{
 			logoLight: '/images/logos/ukg-logo.png',
 			logoDark: '/images/logos/ukg-logo-dark.png',
-			title: 'Software Engineer Intern',
+			title: 'Software Engineer',
 			employer: 'UKG',
-			desktopDuration: 'Present',
-			mobileDuration: 'Present',
-			description: `As an iOS developer in the UKG Pro Mobile App team, I help enhance a leading human capital and workforce management solution by developing intuitive features, optimizing app performance, and ensuring smooth integration between backend systems and the mobile interface.`,
+			desktopDuration: currentDuration.desktop,
+			mobileDuration: currentDuration.mobile,
+			description: `Develop enterprise-scale onboarding applications used by millions of employees worldwide. Work with cross-functional Agile teams to deliver reliable, scalable systems that support critical onboarding experiences.`,
 			skills: [
-				{ src: '/images/logos/swift-logo.png', alt: 'Swift', title: 'Swift' },
-				{ src: '/images/logos/cordova_logo_normal.png', alt: 'Cordova', title: 'Cordova' },
-				{ src: '/images/logos/appium-logo.png', alt: 'Appium', title: 'Appium' }
+				{ src: '/images/logos/angular-logo.png', alt: 'Angular', title: 'Angular' },
+				{ src: '/images/logos/typescript-logo.svg', alt: 'TypeScript', title: 'TypeScript' },
+				{ src: '/images/logos/javascript-logo.jpg', alt: 'JavaScript', title: 'JavaScript' },
+				{ src: '/images/logos/csharp-logo.png', alt: 'C#', title: 'C#' },
+				{ src: '/images/logos/net-logo.png', alt: '.NET', title: '.NET' },
+				{ src: '/images/logos/mongodb-logo.svg', alt: 'MongoDB', title: 'MongoDB' }
 			]
 		},
 		{
@@ -24,18 +58,21 @@
 			logoDark: '/images/logos/ukg-logo-dark.png',
 			title: 'Software Engineer Intern',
 			employer: 'UKG',
-			desktopDuration: '4 months',
-			mobileDuration: '4 months',
-			description: `Collaborated with an Agile team of six engineers in developing the UKG Pro Benefits Hub, a centralized benefits enrollment solution designed to serve millions of users. Played a key role in enhancing the user experience by building user-facing features, fixing UI defects and ensuring software quality through regression tests and development of automated tests with Nightwatch.`,
+			desktopDuration: '10 months',
+			mobileDuration: '10 mos',
+			description: `Contributed across multiple teams working on both web and mobile platforms. On the UKG Pro Benefits Hub team, built and enhanced user-facing Angular features, resolved UI defects, and improved reliability through automated regression testing. Later joined the UKG Pro Mobile App team as an iOS developer, helping deliver new features and performance improvements.`,
 			skills: [
 				{ src: '/images/logos/angular-logo.png', alt: 'Angular', title: 'Angular' },
+				{ src: '/images/logos/typescript-logo.svg', alt: 'TypeScript', title: 'TypeScript' },
 				{ src: '/images/logos/ngrx-logo.svg', alt: 'NgRx', title: 'NgRx' },
 				{ src: '/images/logos/rxjs-logo.png', alt: 'RxJS', title: 'RxJS' },
-				{ src: '/images/logos/typescript-logo.svg', alt: 'TypeScript', title: 'TypeScript' },
 				{ src: '/images/logos/sass-logo.png', alt: 'Sass', title: 'Sass' },
 				{ src: '/images/logos/java-logo.png', alt: 'Java', title: 'Java' },
 				{ src: '/images/logos/sql-logo.png', alt: 'SQL', title: 'SQL' },
-				{ src: '/images/logos/nightwatch-logo.png', alt: 'Nightwatch', title: 'Nightwatch' }
+				{ src: '/images/logos/nightwatch-logo.png', alt: 'Nightwatch', title: 'Nightwatch' },
+				{ src: '/images/logos/swift-logo.png', alt: 'Swift', title: 'Swift' },
+				{ src: '/images/logos/cordova_logo_normal.png', alt: 'Cordova', title: 'Cordova' },
+				{ src: '/images/logos/appium-logo.png', alt: 'Appium', title: 'Appium' }
 			]
 		},
 		{
@@ -142,19 +179,13 @@
 		<figure>
 			<section class="img-bg" />
 			<img
-				src="/images/logos/colorfulpanda.png"
-				alt="Colorful Panda"
-				class="w-40 h-40 sm:w-64 sm:h-64 md:w-80 md:h-80 object-contain"
+				src="/images/logos/profile-photo.jpg"
+				alt="Profile Photo"
+				class="h-40 sm:h-64 md:h-80 object-contain rounded-xl m-10"
 			/>
 		</figure>
 		<div class="space-y-4 text-lg sm:text-xl mt-6 px-4">
-			<p>
-				A passionate <strong>Software Engineer</strong> dedicated to crafting elegant, efficient solutions.
-			</p>
-			<p>
-				Graduating in <strong>May 2025</strong>, currently gaining hands-on experience at
-				<strong>UKG</strong>.
-			</p>
+			<p>A full-stack software engineer building scalable, user-focused applications.</p>
 		</div>
 
 		<!-- Down Arrow -->
@@ -192,34 +223,31 @@
 			<div class="space-y-6 text-base sm:text-lg">
 				<section>
 					<p>
-						Graduating with a Biology degree from Florida International University in 2013, I began
-						my career in forensic science as a serologist at DNA Labs International. In this role, I
-						performed critical forensic analyses and even stepped into the courtroom as an expert
-						witness to help solve complex criminal cases—think CSI, but without the dramatic music.
-						A few years later, I transitioned to R&D at Xymogen, where I contributed to the
-						development of dietary supplements and established a robust stability program that
-						adhered to stringent industry standards.
+						I started my professional journey in an unexpected place: forensic science. As a
+						serologist at DNA Labs International, I performed critical forensic analyses and even
+						stepped into the courtroom as an expert witness to help solve complex criminal cases —
+						think CSI, minus the dramatic soundtrack. 
 					</p>
 					<p class="mt-4">
 						Collaborating with software teams and laboratory systems over the years sparked my
-						passion for technology. This led me to pursue a second bachelor’s in Computer Science at
-						the University of Florida, where I’m set to graduate in May 2025 with a 3.8 GPA.
+						passion for technology. This led me to pursue a second bachelor's in Computer Science at
+						the University of Florida, which I completed in May 2025.
 					</p>
 					<p class="mt-4">
-						I’ve since gained hands-on experience as a Software Engineering Intern at UKG, where I
-						contributed to the development of dynamic Angular components, resolved UI defects, and
-						enhanced software reliability through automated test development. This Spring, I'm
-						excited to be returning to UKG for a second internship, this time as part of their
-						mobile development team!
+						Today, I’m a Software Engineer at UKG, where I build scalable, enterprise-grade software
+						used by millions around the world. I work across the full stack, developing
+						dynamic web applications with Angular and TypeScript, building RESTful APIs, and
+						creating backend services using C#, .NET, and MongoDB. I enjoy collaborating with
+						cross-functional teams to turn complex problems into reliable, high-impact solutions.
 					</p>
 					<p class="mt-4">
-						Outside of work and school, you’ll find me outdoors enjoying nature, planning my next
-						travel adventure, or channeling my inner panda 🐼—nap, eat, repeat (the perfect cycle).
+						Outside of work, I love spending time outdoors, exploring new places, and planning my
+						next travel adventure.
 					</p>
 					<p class="mt-4">
-						As graduation approaches, I’m excited to bring my unique blend of professional
-						experiences and technical expertise to a role where I can craft intuitive applications,
-						tackle complex challenges, and create solutions that make life a little brighter.
+						I bring a unique blend of scientific rigor and technical expertise to everything I
+						build, and I’m driven by the opportunity to create software that makes everyday life a
+						little brighter.
 					</p>
 				</section>
 			</div>
@@ -299,6 +327,7 @@
 	figure svg,
 	.img-bg {
 		@apply w-64 h-64 md:w-80 md:h-80;
+		margin-left: 60px;
 	}
 	.img-bg {
 		@apply absolute z-[-1] rounded-full blur-[50px] transition-all;

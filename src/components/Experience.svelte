@@ -41,7 +41,7 @@
 		<p class="mt-2 text-sm sm:text-base">{description}</p>
 
 		<!-- Skills -->
-		<div class="flex mt-4 space-x-3">
+		<div class="flex flex-wrap mt-4 gap-3">
 			{#each skills as skill}
 				<img
 					src={skill.src}
